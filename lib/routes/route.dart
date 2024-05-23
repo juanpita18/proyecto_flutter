@@ -1,3 +1,4 @@
+import 'package:aplicacion_parcial/pages/consumer_page.dart';
 import 'package:go_router/go_router.dart';
 
 
@@ -11,7 +12,7 @@ class RouteNames {
   static String  listProducts = '/listProducts';
   static String detail =  '/detail';
   static String shopCart = '/shopart';
-
+   static String consumer = '/consumer';
 }
 
 final routesConfig = GoRouter(routes: [
@@ -31,6 +32,9 @@ final routesConfig = GoRouter(routes: [
     path: RouteNames.shopCart, 
     builder: (context, state) => const shopCart(),
   ),
-  
+  GoRoute(
+    path: RouteNames.consumer, 
+    builder: (context, state) => const Consumer(),
+  ),
 ]);
 
